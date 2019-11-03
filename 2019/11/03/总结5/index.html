@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/11 | 我的博客</title>
+  <title>JSP知识点总结 | 我的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/11/index.html">
+  <meta name="description" content="本篇主要总结了JSP基本知识点">
+<meta name="keywords" content="使用,功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JSP知识点总结">
+<meta property="og:url" content="http://yoursite.com/2019/11/03/总结5/index.html">
 <meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="本篇主要总结了JSP基本知识点">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-03T14:19:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的博客">
+<meta name="twitter:title" content="JSP知识点总结">
+<meta name="twitter:description" content="本篇主要总结了JSP基本知识点">
   
     <link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml">
   
@@ -157,78 +162,92 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-总结5" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/03/总结6/" class="archive-article-date">
-  	<time datetime="2019-11-03T13:46:54.520Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/03/总结6/">JSP知识点总结</a>
+    <h1 class="article-title" itemprop="name">
+      JSP知识点总结
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">使用</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">功能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/03/总结5/" class="archive-article-date">
+        
+        <a href="/2019/11/03/总结5/" class="archive-article-date">
   	<time datetime="2019-11-03T13:45:31.980Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/03/总结5/">JSP知识点总结</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本篇主要总结了JSP基本知识点</p>
+<a id="more"></a>
+<p>JSP 定义：<br>    1.Java Server Page, Java EE 组件，本质上是 Servlet。<br>    2.运行在 Web Container.接收 Http Request,生成 Http Response(默认协议是 Http 请求和响应)<br>    3.JSP 使得我们能够分离页面的静态 HTML 和动态部分——我们需要的技术。<br>    4.使页面可以混和html代码、Java代码以及JSP标签；允许访问组件</p>
+<p>基本语法<br>一、JSP的声明(statement)<br>   用来定义在产生的类文件中的类的属性和方法(成员变量)。可声明类(即是内部类)。<br>   由于servlet是工作在多线程环境下，所以尽量不要在service方法体外声明成员变量。<br>   &lt;%!…..%&gt;  //声明时要加”!”，属于类成员，最先加载，可写于任何位置；不加则是脚本的局部变量，必须调用前写。<br>   如：  &lt;%!String hello=”Hello, World!”;%&gt;  //变量的声明<br>        &lt;%=hello%&gt;   //变量的调用<br>        &lt;%! private int counter=0;  public int count(){ return ++counter;} %&gt; //函数的声明<br>        </p><h1>&lt;%=count()%&gt;</h1> //函数的调用<br>   声明规则：<br>    1.JSP中声明的变量和方法对应于Servlet中的实例方法和实例变量。这些将被同时请求该页面的所有用户所共享;<br>    2. 在使用变量或方法前须先定义(不是说声明变量的位置在页面中要处于使用变量的前面，而是指变量不声明不能使用);<br>    3.声明的变量或方法的作用域为当前页面或包含的页面;<br>    4. 语句间以分号分隔。<p></p>
+<p>二、JSP代码段(Scriptlet)<br>      &lt;% java代码 %&gt;<br>   是一段可以在处理请求时间执行的Java代码。可以产生输出，也可以是一些流程控制语句。<br>   在代码段中定义的变量为service方法中的局部变量。<br>   1._jspService()中的局部代码：<br>      &lt;%  System.out.println(“Hi,I like JSP.”); %&gt;   //在控制台打印出，网页上没显示<br>      &lt;%  out.println(“Hi,I like JSP.”); %&gt;          //打印在网页上<br>      &lt;%  Connection conn=DriverManager.getConnection();  Statement st=conn.createStatement();<br>        String sql=”select * from users”;               ResultSet rs=st.executeQuery(sql);<br>         //……<br>       %&gt;<br>   2.比较:<br>        &lt;%! int i=100;%&gt;     //成员变量<br>        &lt;%  int i=101;%&gt;     //_jspService()方法中的局部变量<br>        &lt;%=i%&gt;  //同一文件里，局部变量优先<br>   3.脚本小程序规则：<br>     1) 你使用的脚本语言决定了脚本小程序的规则;<br>     2) 语句间以分号分隔;<br>     3) 可以使用默认的对象、import进的类、declaration声明的方法和对象以及useBean tag中声明的对象。</p>
+<p>三、JSP表达式(expression)<br>       &lt;%=……%&gt;   // “=”号<br>   在JSP请求处理阶段计算他的值，表达式生成的代码是Service方法中的一个代码片断。<br>   JSP对于声明的处理：1、计算表达式的值<br>                   2、将值转换成String<br>                   3、用out.println发送标签；把数据输出至页面的当前位置<br>      &lt;%=”Hello,JSP world!”%&gt;     //out.println(“Hello,JSP world”);<br>      &lt;%=name%&gt;                   //&lt;%!String name=”GiGi”;%&gt; out.println(name);<br>      &lt;%=new java.util.Date()%&gt;   //out.println(new java.util.Date());<br>   表达式规则：<br>     1. 你使用的脚本语言决定了脚本小程序的规则;<br>     2. 执行的顺序为从左到右;<br>     3.分号不能用于表达式。</p>
+<p>四、JSP指令(direction)<br>   指令用于从JSP发送信息到容器上。用来设置全局变量，声明类，要实现的方法和输出内容等。<br>   指令在JSP整个文件内有效。它为翻译阶段提供了全局信息。<br>       &lt;%@……%&gt;  // “@”符号<br>   指令包括：page、include、taglib<br>   1.page指令<br>        import、session、errorPage、isThreadSafe<br>     页面的语言、内容类型、字符集、页面编码<br>        &lt;%@page language=”java” contentType=”text/html; charset=gbk” pageEncoding=”gbk”%&gt;<br>        language：java唯一值，表示脚本中使用的编程语言<br>        contentType：设置了内容的类型和静态页面的编码 (告诉浏览器以什么编码显示)<br>        pageEncoding：页面本身的编码格式 (写页面时用的编码格式)<br>        上面的代码等价于servlet里： response.setContentType(“text/html; charset=gbk”);<br>     import：导入其他的包和类； 其中，JSP默认导入的包是java.lang.*<br>        &lt;%@page import=”java.util.Date”%&gt; //具体的包和类<br>        &lt;%@page import=”java.sql.*”%&gt;     //包下的所有类<br>        &lt;%@page import=”java.util.<em>, java.io.</em>, java.net.*”%&gt; //连写，逗号分隔<br>     Session：指示当前的jsp是否参与会话 (默认为true； 参与会话)<br>        通过指令使当前页面与session不可会话：    &lt;%@page session=”false”%&gt;<br>        session=”true”时，可用内建对象session直接访问会话，例如：<br>        &lt;%  session.setAttribute(“username”,”maxwell”);<br>            String name = (String)session.getAttribute(“username”); %&gt;<br>        &lt;%=name%&gt;<br>     errorPage：<br>        isErrorPage：Jsp页面中出现异常的处理方式<br>        对于有可能出现异常的页面：<br>            &lt;%@page errorPage=”error.jsp”%&gt; //异常时会跳转到处理异常的页面；这页面自己写<br>            在有可能异常的地方打印原因：  throw new Exception(“数据库连接出错”);<br>        对于处理异常的页面(error.jsp)里：<br>            &lt;%@page isErrorPage=”true”%&gt;，其中使用&lt;%=exception.getMessage() %&gt;把异常信息打印出来<br>   2.include指令<br>        把目标页面的内容包含到当前页面,产生页面叠加以后的输出效果 //相当于将两个页面合并；编译时就包含进来<br>        &lt;%@include file=”foot.jsp”%&gt; //可插入任意位置<br>五、JSP中的注释<br>   1.java格式注释<br>      编译器会忽略掉此类注释中的内容(客户端的源码看不见)<br>      &lt;%– JSP注释；可多行 –%&gt;<br>      &lt;%// java 单行注释 %&gt;<br>      &lt;%/* java multi lines comments <em>/%&gt;<br>      &lt;%/**java 特有的注释</em>/%&gt;<br>   2.html风格注释<br>      编译器会执行此类注释中的代码(客户端的源码看得见)<br>      <!-- html风格注释 -->  等价于out.println(“<!-- html风格注释 -->“)<br>      这种注释方式不好的地方就是当页面注释信息太多的时候会增大服务器的负荷。<br>      还有注释信息需要在网络上传输，从而降低效率；内部程序员的测试数据一般不能写在这种注释中，以免泄露。</p>
+<p>六、动作(Action)<br>    &lt;jsp:actionName attributeName=attributeValue/&gt;<br>   JSP的动作包括：<br>     forward、include、useBean、setProperty、getProperty<br>   1.forward动作<br>     形式：&lt;jsp:forward page=”another.jsp”/&gt;<br>          等价于 Servlet中通过RequestDispatcher.forward();<br>     可以传参数<br>         &lt;jsp:forward  page=”another.jsp”&gt;<br>            &lt;jsp:param name=”name” value=”maxwell”/&gt;<br>            &lt;jsp:param name=”age” value=”20” /&gt;<br>         <br>七、Java Bean<br>     a.无参构造器(也是默认的构造方法)<br>     b.标准的getter、setter方法<br>     c.如要进行网络传输(支持RMI)，需实现Serializable接口</p>
+<p>八.JSP中的异常处理<br>   1、try/catch/finally/throws/throw<br>    // 在局部代码里处理异常。<br>   2、errorPage, isErrorPage<br>    // 在整个页面处理异常。<br>       errorPage<br>     形如： &lt;%@page errorPage=”error.jsp”%&gt;<br>     表示：需要错误处理的页面<br>   3.isErrorPage<br>     形如： &lt;%@page isErrorPage=”true”%&gt;<br>     指示：错误页面。其中，有一个隐式对象exception可用： &lt;%=exception%&gt;<br>          产生(隐含)内建对象exception,可通过它获得异常信息<br>          &lt;%=exception.getMessage() %&gt; //把异常信息打印出来<br>九、声明的方式处理异常<br>    // 在整个应用处理异常。(范围比前两种更大)<br>   1.配置： 在web.xml进行配置异常处理<br>      …… <error-page><br>           <exception-type>java.lang.ArithmeticException</exception-type><br>           <location>/MathError.jsp</location><br>         </error-page><br>         <error-page><br>           <error-code>404</error-code><br>           <location>/404.jsp</location><br>         </error-page>  ……</p>
+<p>   2.request 对象<br>     request 对象包含所有请求的信息，<br>     如：请求的来源、标头、cookies和请求相关的参数值等等。<br>     request 对象实现javax.servlet.http.HttpServletRequest接口的，<br>     所提供的方法可以将它分为四大类：<br>     (1)储存和取得属性方法；<br>      void setAttribute(String name, Object value)      设定name属性的值为value<br>      Enumeration getAttributeNamesInScope(int scope)   取得所有scope 范围的属性<br>      Object getAttribute(String name)   取得name 属性的值<br>      void removeAttribute(String name)  移除name 属性的值<br>     (2)取得请求参数的方法<br>      String getParameter(String name)   取得name 的参数值<br>      Enumeration getParameterNames()    取得所有的参数名称<br>      String [] getParameterValues(String name)    取得所有name 的参数值<br>      Map getParameterMap()              取得一个要求参数的Map<br>     (3)能够取得请求HTTP 标头的方法<br>      String getHeader(String name)      取得name 的标头<br>      Enumeration getHeaderNames()       取得所有的标头名称<br>      Enumeration getHeaders(String name) 取得所有name 的标头<br>      int getIntHeader(String name)      取得整数类型name 的标头<br>      long getDateHeader(String name)    取得日期类型name 的标头<br>      Cookie [] getCookies()             取得与请求有关的cookies<br>     (4)其他的方法<br>      String getContextPath()            取得Context 路径(即站台名称)<br>      String getMethod()                 取得HTTP 的方法(GET、POST)<br>      String getProtocol()               取得使用的协议 (HTTP/1.1、HTTP/1.0 )<br>      String getQueryString()            取得请求的参数字符串，不过，HTTP的方法必须为GET<br>      String getRequestedSessionId()     取得用户端的Session ID<br>      String getRequestURI()             取得请求的URL，但是不包括请求的参数字符串<br>      String getRemoteAddr()             取得用户的IP 地址<br>      String getRemoteHost()             取得用户的主机名称<br>      int getRemotePort()                取得用户的主机端口<br>      String getRemoteUser()             取得用户的名称<br>      void getCharacterEncoding(String encoding)    设定编码格式，用来解决窗体传递中文的问题</p>
+<pre><code>3.session 对象
+ session对象表示目前个别用户的会话(session)状况。
+ session对象实现javax.servlet.http.HttpSession接口，HttpSession接口所提供的方法
+  long getCreationTime()             取得session产生的时间，单位是毫秒
+  String getId()                     取得session 的ID
+  long getLastAccessedTime()         取得用户最后通过这个session送出请求的时间
+  long getMaxInactiveInterval()      取得最大session不活动的时间，若超过这时间，session 将会失效
+  void invalidate()                  取消session 对象，并将对象存放的内容完全抛弃
+  boolean isNew()                    判断session 是否为&quot;新&quot;的会话
+  void setMaxInactiveInterval(int interval)   
+                                   设定最大session不活动的时间，若超过这时间，session 将会失效
+4.application对象
+ application对象最常被使用在存取环境的信息。
+ 因为环境的信息通常都储存在ServletContext中，所以常利用application对象来存取ServletContext中的信息。
+ application 对象实现javax.servlet.ServletContext 接口，ServletContext接口容器所提供的方法
+  int getMajorVersion()              取得Container主要的Servlet API版本
+  int getMinorVersion()              取得Container次要的Servlet API 版本
+  String getServerInfo()             取得Container的名称和版本
+  String getMimeType(String file)    取得指定文件的MIME 类型
+  ServletContext getContext(String uripath)        取得指定Local URL的Application context
+  String getRealPath(String path)    取得本地端path的绝对路径
+  void log(String message)           将信息写入log文件中
+  void log(String message, Throwable throwable)    将stack trace 所产生的异常信息写入log文件中</code></pre>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/1.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -244,145 +263,126 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/03/总结5/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/03/总结4/" class="archive-article-date">
-  	<time datetime="2019-11-03T11:49:11.080Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/11/03/总结6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JSP知识点总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/03/总结4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MYSQL知识点总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/03/总结4/">MYSQL知识点总结</a>
-    </h1>
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2019/11/03/总结5/", 
+    sourceId: "总结5",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">使用</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">功能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/03/总结3/" class="archive-article-date">
-  	<time datetime="2019-11-03T08:27:47.330Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/03/总结3/">JS知识点总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">使用</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">功能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/03/知识点总结/" class="archive-article-date">
-  	<time datetime="2019-11-03T06:58:40.990Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/03/知识点总结/">HTML知识点总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">使用</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">功能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -405,8 +405,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
