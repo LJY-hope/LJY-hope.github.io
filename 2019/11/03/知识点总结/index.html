@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 功能 | 我的博客</title>
+  <title>HTML知识点总结 | 我的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="我的博客">
-<meta property="og:url" content="http://yoursite.com/tags/功能/index.html">
+  <meta name="description" content="本篇主要总结了HTML基本知识点">
+<meta name="keywords" content="使用,功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML知识点总结">
+<meta property="og:url" content="http://yoursite.com/2019/11/03/知识点总结/index.html">
 <meta property="og:site_name" content="我的博客">
+<meta property="og:description" content="本篇主要总结了HTML基本知识点">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-03T07:19:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的博客">
+<meta name="twitter:title" content="HTML知识点总结">
+<meta name="twitter:description" content="本篇主要总结了HTML基本知识点">
   
     <link rel="alternative" href="/atom.xml" title="我的博客" type="application/atom+xml">
   
@@ -157,36 +162,125 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-知识点总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      HTML知识点总结
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/03/知识点总结/" class="archive-article-date">
+
+        
+        <a href="/2019/11/03/知识点总结/" class="archive-article-date">
   	<time datetime="2019-11-03T06:58:40.990Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-03</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/03/知识点总结/">HTML知识点总结</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本篇主要总结了HTML基本知识点</p>
+<a id="more"></a>
+<p>1.声明文档类型     <!DOCTYPE HTML></p>
+<p>2.HTML基本语法：常规标记：&lt;标记 属性=”属性值”&gt;</p>
+<p>空标记：&lt;标记 属性=”属性值”/&gt;</p>
+<ol start="3">
+<li>加粗：区别：这个标签对应 bold，即文本加粗，其目的仅仅是为了加粗显示文本，是一种样式／风格需求；</li>
+</ol>
+<p>这个标签意思是加强，表示该文本比较重要，提醒读者／终端注意。为了达到这个目的，浏览器等终端将其加粗显示；</p>
+<p>总结：为了加粗而加粗，为了标明重点而加粗。</p>
+<p>4.倾斜：标签告诉浏览器将包含其中的文本以斜体字（italic）或者倾斜（oblique）字体显示；</p>
+<p>标签中的文本表示为强调的内容，对于所有浏览器的显示效果来说，是把这段文字用斜体来显示；</p>
+<p>5.get与post的区别：get（幂等）是从服务器上获取数据，post（非幂等）是向服务器传送数据。</p>
+<p>get是把参数数据队列加到提交表单的ACTION属性所指的URL中，值和表单内各个字段一一对应，在URL中可以看到。post是通过HTTP post机制，将表单内各个字段与其内容放置在HTML HEADER内一起传送到ACTION属性所指的URL地址。用户看不到这个过程。</p>
+<p>对于get方式，服务器端用Request.QueryString获取变量的值，对于post方式，服务器端用Request.Form获取提交的数据。</p>
+<p>get传送的数据量较小，不能大于2KB。post传送的数据量较大，一般被默认为不受限制。但理论上，IIS4中最大量为80KB，IIS5中为100KB。</p>
+<p>get安全性非常低，post安全性较高。但是执行效率却比Post方法好。</p>
+<p>建议：</p>
+<p>get方式的安全性较Post方式要差些，包含机密信息的话，建议用Post数据提交方式；</p>
+<p>在做数据查询时，建议用Get方式；而在做数据添加、修改或删除时，建议用Post方式；</p>
+<p>6.link 和@import的区别：</p>
+<p>link可以加载css外，@import是css提供的一种方式，也只能加载css；</p>
+<p>link引用的css会和页面同时加载，@import会等页面全部下载完成后再被加载</p>
+<p>@import存在兼容问题，低版本浏览器不识别。</p>
+<p>link可以控制dom元素，@import不是dom可以控制的。</p>
+<ol start="7">
+<li>伪类和伪元素：伪类（单引号）代表某一刻的状态：：after等</li>
+</ol>
+<p>伪元素（双引号）是指元素中特别的内容：(:：last-child）等</p>
+<p>a标签中顺序：：link（默认）  ：visited（鼠标访问后）  ：hover （鼠标滑过） :active （访问时）</p>
+<p>8.css层叠：元素的样式根据它样式所占权重的大小进行渲染（元素是1，类是10，id是100，伪类是1，伪元素是10）</p>
+<p>包含块：包含块（Containing Block）是绝对定位的基础，包含块为绝对定位元素提供坐标，偏移量和显示范围的参照物，定义元素为包含块，给绝对定位元素的父元素添加position：relative,即父元素就是一个包含块</p>
+<p>9.font：加粗（bolder  normal  100~500） 倾斜（italic oblique normal）字体/行高  “宋体”</p>
+<p>10.word-spcing:词间距（单词与单词之间的间隔）</p>
+<p>letter-spacing:控制英文字母和汉字的字距</p>
+<p>border:double dotted dashed</p>
+<p>background-attachment:fixed：背景图固定，相对浏览器</p>
+<p>11.层级选择器：子级选择器，兄弟选择器，通用兄弟选择器</p>
+<p>12.给子元素设置外边距时:会默认加到父元素上</p>
+<p>给父元素或者子元素任意一个加float</p>
+<p>给父元素加padding或border</p>
+<p>13.内联元素：盒模型左右支持，上下不支持，水平从左到右排列，宽高为内      容大小（span strong em i br a img（行内块） input（行内块））</p>
+<p>块状元素： （div p li ul ol  tr h1等 ）border 重叠显示</p>
+<p>可变元素：</p>
+<p>applet - java applet</p>
+<p>◎ button - 按钮</p>
+<p>◎ del - 删除文本</p>
+<p>◎ iframe - inline frame</p>
+<p>◎ ins - 插入的文本</p>
+<p>◎ map - 图片区块(map)</p>
+<p>◎ object - object对象</p>
+<p>◎ script - 客户端脚本</p>
+<p>14.设置float属性后，相当于给该属性加display:inline-block</p>
+<p>15.visiblity:hidden/visible 隐藏可见，但是还是占空间</p>
+<p>display：none 使对象完全消失，不占空间</p>
+<p>overflow:hidden auto visible(默认) inherit scroll</p>
+<p>16.定位：相对定位：relative（相对于自己的定位），占位</p>
+<p>绝对定位：absolute（相对于body的定位），不占位，如果有定位的父元素，则根据父元素进行定位</p>
+<p>固定定位：fixed（相对浏览器的窗口定位）</p>
+<p>默认值：static</p>
+<p>17.让一个元素始终在窗口水平 垂直位置居中：</p>
+<p>div{width:200px;height:200px;position:fixed/absolute;left:0;top:0;right:0;bottom:0;margin:auto}</p>
+<p>div{width:200px;height:200px;position:fixed/abolute;left:50%;top:50%;margin:-100px 0 0 -100px（自身宽高一半）};</p>
+<p>18.ie透明度：filter:alper(opacity:50)</p>
+<p>19.删除线：   <u></u>   <del></del>  <s></s></p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/1.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -202,61 +296,117 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/03/知识点总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-13T05:02:09.513Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/13/总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/hello-world/">Hello World</a>
-    </h1>
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://yoursite.com/2019/11/03/知识点总结/", 
+    sourceId: "知识点总结",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">使用</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">功能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -279,9 +429,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
